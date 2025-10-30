@@ -1,60 +1,83 @@
-## Introduction to Linux
-# what is linux?
-**Linux** is an open-source , unix-like operating system kernel first created by **linus torvaids** in 1991.
+# LINUX COMMANDS
 
-it is widely used in servers,mobile device,embedded systems  and desktop computers. 
-
-### key features of Linux:
--**free and open source**
--**multitasking** and **multiuser** 
--**secure and stable**
--**highly customizable**
--**used in servers ,supercomputers,Iot,mobile(android)**
+## 1) Package Management (Debian-based)
+| Command | Description | Example |
+|----------|--------------|----------|
+| `apt update` | Update repo info | `sudo apt update` |
+| `apt upgrade` | Upgrade packages | `sudo apt upgrade` |
+| `apt install` | Install a package | `sudo apt install nmap` |
+| `apt remove` | Remove a package | `sudo apt remove apache2` |
 
 ---
 
-### history of linux
-| year   |   milestone  |
-|--------|--------------|
-| 1969   |   unix developed at bell labs  |
-| 1983   |   GNU project started by Richard Stallem |
-| 1991   |   linus torvards release first linux kernel|
-| 1992   |   linux emerged with GNU tools (making it a complete 05)|
-| 2000+  |   linux dominants in servers ,smartphones, cloud, containers |
+## 2) File & Directory Commands
+| Command | Description | Example |
+|----------|--------------|----------|
+| `pwd` | Show current directory | `pwd` |
+| `ls` | List files/directories | `ls -l` |
+| `ls -l` | Detailed listing | `ls -l` |
+| `ls -a` | Show hidden files | `ls -a` |
+| `cd` | Change directory | `cd /etc` |
+| `cd ..` | Go up one level | `cd ..` |
+| `cd ~` | Go to home directory | `cd ~` |
+| `cd -` | Go to previous directory | `cd -` |
+| `mkdir` | Create directory | `mkdir testdir` |
+| `rmdir` | Remove empty directory | `rm -r dir/` |
+| `rm` | Remove files/directories | `rm file.txt` |
+| `touch` | Create empty file | `touch file1.txt` |
+| `cp` | Copy file/directory | `cp file1.txt file2.txt` |
+| `mv` | Move/rename file | `mv file1.txt file2.txt` |
+| `find` | Search for files | `find . -name "*.sh"` |
 
+---
 
-------
+## 3) File Content Commands
+| Command | Description | Example |
+|----------|--------------|----------|
+| `cat` | View file content | `cat file.txt` |
+| `more`, `less` | View file with scroll | `less file.txt` |
+| `head` | View first 10 lines | `head file.txt` |
+| `tail` | View last 10 lines | `tail file.txt` |
+| `wc` | Word/line count | `wc file.txt` |
+| `cut` | Extract columns | `cut -d',' -f1 file.csv` |
+| `sort` | Sort file lines | `sort file.txt` |
+| `uniq` | Remove duplicates | `uniq file.txt` |
+| `diff` | Show differences between files | `diff file1 file2` |
 
+---
 
+## 4) User & Permissions
+| Command | Description | Example |
+|----------|--------------|----------|
+| `whoami` | Show current user | `whoami` |
+| `id` | Show user/group IDs | `id` |
+| `chmod` | Change permissions | `chmod 755 script.sh` |
+| `chown` | Change owner | `chown root:root file.txt` |
+| `adduser` | Add user | `adduser alice` |
+| `passwd` | Change password | `passwd alice` |
+| `su` | Switch user | `su -` |
+| `sudo` | Run as superuser | `sudo apt update` |
 
-### Popular Linux Distributions  
+---
 
-| Distro | Description | Best For |
-|--------|-------------|----------|
-| *Ubuntu* | User-friendly, based on Debian | Beginners, Desktop, Servers |
-| *Debian* | Very stable, parent of Ubuntu | Servers, Developers |
-| *Kali Linux* | Security-focused, preloaded with hacking tools | Cybersecurity, Penetration Testing |
-| *CentOS / RHEL* | Enterprise-grade stability | Servers, Enterprises |
-| *Fedora* | Cutting-edge features | Developers,power users |
-| *Arch Linux* | Minimalist, rollin release | Advanced users, Customization |
+## 5) Networking
+| Command | Description | Example |
+|----------|--------------|----------|
+| `ping` | Test connectivity | `ping google.com` |
+| `ifconfig` / `ip a` | View network interfaces | `ip a` |
+| `netstat -tuln` | View open ports | `netstat -tuln` |
+| `curl` | Fetch URLs | `curl http://example.com` |
+| `wget` | Download files | `wget http://file.com/file.txt` |
 
-> Note: Android is also built on the Linux kernel.
+---
 
- ### Open Source Concept    
-
-*Open Source Software (OSS)* is software with publicly available source code, allowing anyone to inspect, modify, and enhance it.
-
-*Key Principles:*
-- *Freedom to Use*: No restrictions on usage.
-- *Freedom to Study*: Access to source code.
-- *Freedom to Modify*: Change the code to suit your needs.
-- *Freedom to Share*: Distribute your versions.
-
-Linux is licensed under the *GNU General Public License (GPL)*, which ensures these freedoms.
-
-------
-
-"Linux is only free if your time has no value." - Jamie Zawinski
-
-> Linux powers 90%+ of the world's supercomputers, most web servers, cloud infrastructure, and is a favorite among developers and security professionals
-> 
+## 6) File Compression & Archiving
+| Command | Description | Example |
+|----------|--------------|----------|
+| `tar` | Archive files | `tar -cf archive.tar file1 file2` |
+| `tar -xvf` | Extract tar archive | `tar -xvf archive.tar` |
+| `tar -czvf` | Create gzip tar | `tar -czvf archive.tar.gz dir/` |
+| `gzip` | Compress file | `gzip file.txt` |
+| `gunzip` | Decompress `.gz` | `gunzip file.txt.gz` |
+| `zip` | Zip files | `zip archive.zip file1 file2` |
+| `unzip` | Unzip archive | `unzip archive.zip` |
